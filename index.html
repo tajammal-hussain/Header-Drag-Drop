@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header Builder</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+      $(function () {
+        $(
+          "#sortable1, #sortable2, #sortable3, #sortable4, #sortable5, #sortable6, #Dsortable1, #Dsortable2, #Dsortable3, #Dsortable4, #Dsortable5, #Dsortable6,#Dsortable7,#Dsortable8,#Dsortable9,#Dsortable10"
+        )
+          .sortable({
+            connectWith: ".connectedSortable",
+            placeholder: "ui-state-highlight",
+          })
+          .disableSelection();
+      });
+    </script>
+
+    <!-- js script-->
+    <script src="index.js"></script>
+    <!-- js script-->
+    <!-- Include Tailwind CSS -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .ui-state-highlight {
+        height: 1px;
+        border-top: 5px solid #4e5459;
+        border-bottom: 5px solid #4e5459;
+        border-left: 20px solid #4e5459;
+        border-right: 20px solid #4e5459;
+        border-radius: 4px;
+        color: aliceblue;
+      }
+      .icons8-settings { 
+display: inline-block;
+width: 24px;
+height: 24px;
+background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIKc3R5bGU9ImZpbGw6I0ZGRkZGRjsiPgogICAgPHBhdGggZD0iTSAxMC40OTAyMzQgMiBDIDEwLjAxMTIzNCAyIDkuNjAxNzY1NiAyLjMzODU5MzggOS41MDk3NjU2IDIuODA4NTkzOCBMIDkuMTc1NzgxMiA0LjUyMzQzNzUgQyA4LjM1NTAyMjQgNC44MzM4MDEyIDcuNTk2MTA0MiA1LjI2NzQwNDEgNi45Mjk2ODc1IDUuODE0NDUzMSBMIDUuMjg1MTU2MiA1LjI0ODA0NjkgQyA0LjgzMjE1NjMgNS4wOTIwNDY5IDQuMzMzNzUgNS4yNzkzNTk0IDQuMDkzNzUgNS42OTMzNTk0IEwgMi41ODU5Mzc1IDguMzA2NjQwNiBDIDIuMzQ2OTM3NSA4LjcyMTY0MDYgMi40MzM5MjE5IDkuMjQ4NSAyLjc5NDkyMTkgOS41NjI1IEwgNC4xMTMyODEyIDEwLjcwODk4NCBDIDQuMDQ0NzE4MSAxMS4xMzAzMzcgNCAxMS41NTkyODQgNCAxMiBDIDQgMTIuNDQwNzE2IDQuMDQ0NzE4MSAxMi44Njk2NjMgNC4xMTMyODEyIDEzLjI5MTAxNiBMIDIuNzk0OTIxOSAxNC40Mzc1IEMgMi40MzM5MjE5IDE0Ljc1MTUgMi4zNDY5Mzc1IDE1LjI3ODM1OSAyLjU4NTkzNzUgMTUuNjkzMzU5IEwgNC4wOTM3NSAxOC4zMDY2NDEgQyA0LjMzMjc1IDE4LjcyMTY0MSA0LjgzMjE1NjIgMTguOTA4OTA2IDUuMjg1MTU2MiAxOC43NTM5MDYgTCA2LjkyOTY4NzUgMTguMTg3NSBDIDcuNTk1ODg0MiAxOC43MzQyMDYgOC4zNTUzOTM0IDE5LjE2NjMzOSA5LjE3NTc4MTIgMTkuNDc2NTYyIEwgOS41MDk3NjU2IDIxLjE5MTQwNiBDIDkuNjAxNzY1NiAyMS42NjE0MDYgMTAuMDExMjM0IDIyIDEwLjQ5MDIzNCAyMiBMIDEzLjUwOTc2NiAyMiBDIDEzLjk4ODc2NiAyMiAxNC4zOTgyMzQgMjEuNjYxNDA2IDE0LjQ5MDIzNCAyMS4xOTE0MDYgTCAxNC44MjQyMTkgMTkuNDc2NTYyIEMgMTUuNjQ0OTc4IDE5LjE2NjE5OSAxNi40MDM4OTYgMTguNzMyNTk2IDE3LjA3MDMxMiAxOC4xODU1NDcgTCAxOC43MTQ4NDQgMTguNzUxOTUzIEMgMTkuMTY3ODQ0IDE4LjkwNzk1MyAxOS42NjYyNSAxOC43MjE2NDEgMTkuOTA2MjUgMTguMzA2NjQxIEwgMjEuNDE0MDYyIDE1LjY5MTQwNiBDIDIxLjY1MzA2MyAxNS4yNzY0MDYgMjEuNTY2MDc4IDE0Ljc1MTUgMjEuMjA1MDc4IDE0LjQzNzUgTCAxOS44ODY3MTkgMTMuMjkxMDE2IEMgMTkuOTU1MjgyIDEyLjg2OTY2MyAyMCAxMi40NDA3MTYgMjAgMTIgQyAyMCAxMS41NTkyODQgMTkuOTU1MjgyIDExLjEzMDMzNyAxOS44ODY3MTkgMTAuNzA4OTg0IEwgMjEuMjA1MDc4IDkuNTYyNSBDIDIxLjU2NjA3OCA5LjI0ODUgMjEuNjUzMDYzIDguNzIxNjQwNiAyMS40MTQwNjIgOC4zMDY2NDA2IEwgMTkuOTA2MjUgNS42OTMzNTk0IEMgMTkuNjY3MjUgNS4yNzgzNTk0IDE5LjE2Nzg0NCA1LjA5MTA5MzcgMTguNzE0ODQ0IDUuMjQ2MDkzOCBMIDE3LjA3MDMxMiA1LjgxMjUgQyAxNi40MDQxMTYgNS4yNjU3OTM3IDE1LjY0NDYwNyA0LjgzMzY2MDkgMTQuODI0MjE5IDQuNTIzNDM3NSBMIDE0LjQ5MDIzNCAyLjgwODU5MzggQyAxNC4zOTgyMzQgMi4zMzg1OTM3IDEzLjk4ODc2NiAyIDEzLjUwOTc2NiAyIEwgMTAuNDkwMjM0IDIgeiBNIDEyIDggQyAxNC4yMDkgOCAxNiA5Ljc5MSAxNiAxMiBDIDE2IDE0LjIwOSAxNC4yMDkgMTYgMTIgMTYgQyA5Ljc5MSAxNiA4IDE0LjIwOSA4IDEyIEMgOCA5Ljc5MSA5Ljc5MSA4IDEyIDggeiI+PC9wYXRoPgo8L3N2Zz4=') 50% 50% no-repeat;
+background-size: 100%; }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto mt-8">
+      <!-- Header -->
+      <header class="flex justify-between items-center mb-4">
+        <div>
+          <h1 class="text-lg font-semibold">Header Builder</h1>
+        </div>
+        <div>
+          <ul class="flex">
+            <li id="desktop" class="mr-1">
+              <a
+                href="#"
+                class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center"
+                >Desktop</a
+              >
+            </li>
+            <li id="mobile" class="mr-1">
+              <a
+                href="#"
+                class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center"
+                >Mobile</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <button
+            id="clearBtn"
+            class="px-4 py-2 bg- text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 rounded-lg"
+          >
+            Clear
+          </button>
+        </div>
+      </header>
+      <div
+        id="mobileContent"
+        class="p-4 hidden bg-[#3c434a] border border-gray-300 rounded-lg"
+      >
+        <div>
+          <div class="bg-[#3c434a]">
+            <span
+              id="topbarspan"
+              class="hidden mobile max-w-[60px] absolute z-index-10 top-[95px] text-center text-white bg-sky-600"
+              >topbar</span
+            >
+            <div
+              id="topbar"
+              class="py-[2px] hover:border-sky-600 hover:border-2"
+            >
+              <div
+                id="sortable1"
+                class="connectedSortable px-4 py-2 text-center border-dashed border border-[#555] min-h-8 bg-black text-white"
+              ></div>
+            </div>
+            <span
+              id="hmainspan"
+              class="hidden max-w-[100px] absolute z-index-10 top-[125px] text-center text-white bg-sky-600"
+              >Header Main</span
+            >
+            <div
+              id="headermain"
+              class="py-[2px] group flex hover:border-sky-600 hover:border-2"
+            >
+              <div
+                id="sortable2"
+                class="connectedSortable px-4 py-1 basis-1/2 border-dashed border border-[#555] min-h-8 bg-black text-white"
+              ></div>
+              <div
+                class="px-4 py-1 basis-1/6 border-dashed text-center font-semibold mx-1 border border-[#555] min-h-8 bg-black text-white text-xl"
+              >
+              <span>LOGO</span>
+              </div>
+              <div
+                id="sortable4"
+                class="connectedSortable px-4 py-1 text-right basis-1/2 border-dashed border border-[#555] min-h-8 bg-black text-white"
+              ></div>
+            </div>
+            <span
+              id="bmainspan"
+              class="hidden absolute z-index-10 top-[170px] max-w-[120px] text-center text-white bg-sky-600"
+              >Header Bottom</span
+            >
+            <div
+              id="bottommain"
+              class="py-[2px] headerbottom hover:border-sky-600 hover:border-2"
+            >
+              <div
+                id="sortable5"
+                class="connectedSortable px-4 basis-96 py-2 text-center border-dashed border border-[#555] min-h-8 bg-black text-white"
+              ></div>
+            </div>
+          </div>
+          <div
+            id="sortable6"
+            class="connectedSortable mr-4 w-full bg-black hover:border-sky-600 hover:border-2 mt-5 p-2 pb-2 min-h-10 text-white"
+          >
+            <span
+              class="border-solid border-blue-200 px-2 cursor-grab text-sm active:cursor-grabbing mb-2 shadow-xl bg-slate-400 mr-1 rounded-md p-1"
+            >
+              Cart
+            </span>
+            <span
+              class="border-solid border-blue-200 px-2 cursor-grab text-sm active:cursor-grabbing mb-2 shadow-xl bg-slate-400 mr-1 rounded-md p-1"
+            >
+              NavLink
+            </span>
+            <span
+              class="border-solid border-blue-200 px-2 cursor-grab text-sm active:cursor-grabbing mb-2 shadow-xl bg-slate-400 mr-1 rounded-md p-1"
+            >
+              Spacebar
+            </span>
+            <span
+              class="border-solid border-blue-200 px-2 cursor-grab text-sm active:cursor-grabbing mb-2 shadow-xl bg-slate-400 mr-1 rounded-md p-1"
+            >
+              SideBar
+            </span>
+            <span
+              class="border-solid border-blue-200 px-2 cursor-grab text-sm active:cursor-grabbing mb-2 shadow-xl bg-slate-400 mr-1 rounded-md p-1"
+            >
+              HTML
+            </span>
+            <span
+              class="border-solid border-blue-200 px-2 cursor-grab text-sm active:cursor-grabbing mb-2 shadow-xl bg-slate-400 mr-1 rounded-md p-1"
+            >
+              Button
+            </span>
+        </span>
+        <span
+          class="border-solid border-blue-200 px-2 cursor-grab text-sm active:cursor-grabbing mb-2 shadow-xl bg-slate-400 mr-1 rounded-md p-1"
+        >
+          |
+        </span>
+          </div>
+        </div>
+      </div>
+      <div
+        id="desktopContent"
+        class=" desktop p-4 bg-[#3c434a] border border-gray-300 rounded-lg"
+      >
+        <div class="bg-[#3c434a]">
+          <span
+            id="Dtopbarspan"
+            class="hidden max-w-[60px] absolute z-index-10 top-[95px] text-center text-white bg-sky-600"
+            >Top bar</span
+          >
+          <div
+            id="Dtopbar"
+            class="py-[2px] hover:border-sky-600 hover:border-2 flex"
+          >
+            <div
+              id="Dsortable1"
+              class="connectedSortable text-left px-4 py-2 basis-1/3 mx-1 border-dashed border border-[#555] min-h-8 bg-black"
+            ></div>
+            <div
+              id="Dsortable2"
+              class="connectedSortable px-4 py-2 text-center basis-1/3 mx-1 border-dashed border border-[#555] min-h-8 bg-black text-white"
+            ></div>
+            <div
+              id="Dsortable3"
+              class="connectedSortable px-4 py-2 text-right basis-1/3 mx-1 border-dashed border border-[#555] min-h-8 bg-black text-white"
+            ></div>
+          </div>
+          <span
+            id="Dhmainspan"
+            class="hidden max-w-[100px] absolute z-index-10 top-[125px] text-center text-white bg-sky-600"
+            >Header Main</span
+          >
+          <div
+            id="Dheadermain"
+            class="flex py-1 hover:border-sky-600 hover:border-2"
+          >
+            <div
+              class=" text-xl basis-1/6 mx-1 border-dashed border text-left pl-4 border-[#555] min-h-8 bg-black text-white"
+            >
+              <strong>LOGO</strong>
+              <span class="relative top-1 icons8-settings"></span>
+            </div>
+            <div
+              id="Dsortable5"
+              class="connectedSortable px-4 py-2 text-left basis-1/2 mx-1 border-dashed border border-[#555] min-h-8 bg-black text-white"
+            ></div>
+            <div
+              id="Dsortable6"
+              class="connectedSortable px-4 py-2 text-right basis-1/2 mx-1 border-dashed border border-[#555] min-h-8 bg-black text-white"
+            ></div>
+          </div>
+          <span
+            id="Dbmainspan"
+            class="hidden max-w-[120px] absolute z-index-10 top-[170px] text-center text-white bg-sky-600"
+            >Header Bottom</span
+          >
+          <div
+            id="Dbottommain"
+            class="flex py-[2px] hover:border-sky-600 hover:border-2"
+          >
+            <div
+              id="Dsortable7"
+              class="connectedSortable px-4 py-2 text-left basis-1/3 mx-1 border-dashed border border-[#555] min-h-8 bg-black text-white"
+            ></div>
+            <div
+              id="Dsortable8"
+              class="connectedSortable px-4 py-2 basis-1/3 text-center mx-1 border-dashed border border-[#555] min-h-8 bg-black text-white"
+            ></div>
+            <div
+              id="Dsortable9"
+              class="connectedSortable px-4 py-2 basis-1/3 mx-1 text-right border-dashed border border-[#555] min-h-8 bg-black text-white"
+            ></div>
+          </div>
+        </div>
+        <div
+          id="Dsortable10"
+          class="connectedSortable pt-2 mr-4 w-full bg-black hover:border-sky-600 hover:border-2 mt-5 px-2 pb-2 min-h-10 text-white"
+        >
+          <span
+            class="border-solid border-blue-200 px-2 cursor-grab text-sm active:cursor-grabbing mb-2 shadow-xl bg-slate-400 mr-1 rounded-md p-1"
+          >
+            Block 1
+          </span>
+          <span
+            class="border-solid border-blue-200 px-2 cursor-grab text-sm active:cursor-grabbing mb-2 shadow-xl bg-slate-400 mr-1 rounded-md p-1"
+          >
+            Search form
+          </span>
+          <span
+            class="border-solid border-blue-200 px-2 cursor-grab text-sm active:cursor-grabbing mb-2 shadow-xl bg-slate-400 mr-1 rounded-md p-1"
+          >
+            Contact
+          </span>
+          <span
+            class="border-solid border-blue-200 px-2 cursor-grab text-sm active:cursor-grabbing mb-2 shadow-xl bg-slate-400 mr-1 rounded-md p-1"
+          >
+            Newsletter
+          </span>
+        </div>
+      </div>
+      <!-- Tab 2 Content -->
+    </div>
+  </body>
+</html>
